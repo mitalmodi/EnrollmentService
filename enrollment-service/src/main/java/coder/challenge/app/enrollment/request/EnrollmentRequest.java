@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 /**
@@ -16,6 +18,8 @@ import lombok.NonNull;
  *
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class EnrollmentRequest implements Serializable {
 
 	/**

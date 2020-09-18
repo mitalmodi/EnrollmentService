@@ -17,7 +17,9 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author v.huggila
@@ -26,6 +28,8 @@ import lombok.Data;
 @Entity
 @Table(name = "t_user_dep")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class DependantEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +40,7 @@ public class DependantEntity {
 	@Temporal(TemporalType.DATE)
 	private Date dob;
 	@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "enroll_id")
-    private EnrollmentEntity enroll;
+	@JoinColumn(name = "enroll_id")
+	private EnrollmentEntity enroll;
 
 }
